@@ -5,5 +5,7 @@ const ofrenda = document.querySelector('#ofrenda');
 // Esta función se ejecuta cada vez que alguien selecciona el botón
 boton.addEventListener('click', () => {
   // TODO 5: Enciende la vela y muestra tu dedicatoria.
-  // Pega aquí el código del tutorial.
+  const encendida = ofrenda.classList.toggle('encendida');
+  boton.setAttribute('aria-pressed', encendida);
+  boton.textContent = encendida ? 'Apagar la vela' : 'Encender la vela';
 });
